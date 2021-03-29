@@ -39,6 +39,9 @@ class PostSeeder extends Seeder
             $post->body = $faker->text(1000);
 
             $author->posts()->save($post);
+
+
+
         }
 
 
