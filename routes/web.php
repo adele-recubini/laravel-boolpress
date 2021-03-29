@@ -20,7 +20,7 @@ Route::get('/', function () {
 });
 
 Route::get('/author', 'AuthorController@index');
-
+//tutti i post
 Route::resource('post', 'PostController');
-
+//solo i commenti relativi ad ogni post
 route::resource('comment','PostController');
