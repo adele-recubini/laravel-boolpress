@@ -24,7 +24,7 @@ class CreatePostsTable extends Migration
 
             $table->foreign('author_id')
                    ->references('id')
-                   ->on('author');
+                   ->on('authors');
 
         });
     }

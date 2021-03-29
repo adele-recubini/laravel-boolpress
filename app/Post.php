@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
-    public funciotn author(){
+    public function author(){
 
         return $this->belongsTo('App\Author');
     }
