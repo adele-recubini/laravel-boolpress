@@ -40,7 +40,7 @@ class PostSeeder extends Seeder
 
 
             $author->detail()->save($authorDetail);
-            $author->posts()->save($post);
+            $author->post()->save($post);
         }
 
 
