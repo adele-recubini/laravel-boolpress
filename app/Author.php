@@ -15,7 +15,7 @@ class Author extends Model
 
   //colleghiamo l autor al post
 
-  public function post(){
+  public function posts(){
       return $this->hasMany('App\Post');
   }
 
