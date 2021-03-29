@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Post;
+use App\Comment;
 
 
 class PostController extends Controller
@@ -27,7 +28,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**
@@ -47,9 +48,9 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Comment $comment)
     {
-        //
+        return view('post.show', compact('comment'));
     }
 
     /**
