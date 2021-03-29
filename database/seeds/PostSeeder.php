@@ -22,6 +22,7 @@ class PostSeeder extends Seeder
             $author->name =$faker->name();
             $author->lastname = $faker->lastName();
             $author->email = $faker->email();
+
             $author->save();
 
 
@@ -30,16 +31,13 @@ class PostSeeder extends Seeder
             $authorDetail->website = $faker->url();
             $authorDetail->pic ='https://picsum.photos/seed/'.rand(1,1000).'/200/300';
 
+            $author->detail()->save($authorDetail);
+
 
             $post =new Post();
             $post->title = $faker->text(20);
             $post->body = $faker->text(1000);
 
-
-
-
-
-            $author->detail()->save($authorDetail);
             $author->post()->save($post);
         }
 
