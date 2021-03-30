@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthorController;
-use App\Http\Controllers\PostController;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,6 +21,9 @@ Route::get('/', function () {
 
 Route::get('/author', 'AuthorController@index');
 //tutti i post
-Route::resource('post', 'PostController');
+//Route::resource('post', 'PostController');
+
+Route::resource('post', PostController::class);
+
 //solo i commenti relativi ad ogni post
 route::resource('comment','PostController');

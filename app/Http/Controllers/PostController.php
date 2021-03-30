@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Post;
 use App\Comment;
 use App\Author;
+use App\Tag;
 
 
 class PostController extends Controller
@@ -30,8 +31,9 @@ class PostController extends Controller
     public function create()
     {
         $authors = Author::all();
+        $tags = Tag::all();
 
-        return view('post.create', compact('authors'));
+        return view('post.create', compact('authors', 'tags'));
     }
 
     /**
@@ -43,6 +45,9 @@ class PostController extends Controller
     public function store(Request $request)
     {
         $data = $request->all();
+
+        dd($data);
+
         $post =new Post();
         $post->fill($data);
         $post->save();

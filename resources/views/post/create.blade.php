@@ -23,5 +23,16 @@
       <label for="body1">body</label>
       <textarea class="form-control" id="body" name="body" rows="3"></textarea>
     </div>
+
+    <div class="form-group">
+        <select class="form-select" name="tags[]" id ="tags[]" multiple>
+            @foreach ( $tags as $tag )
+            <option value="{{$tag->id}}">{{$tag->name}}</option>
+            @endforeach
+
+          </select>
+    </div>
+
+
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>
