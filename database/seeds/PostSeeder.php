@@ -36,6 +36,7 @@ class PostSeeder extends Seeder
 
             for($y = 0; $y< rand(1, 5); $y++){
 
+
               $post =new Post();
               $post->title = $faker->text(20);
               $post->body = $faker->text(1000);
